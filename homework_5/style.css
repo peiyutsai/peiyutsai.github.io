@@ -1,0 +1,280 @@
+/*My Figma Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #080503;
+    font-family: "Montserrat", sans-serif;
+}
+body a{
+    text-decoration: none;
+}
+p{
+    color: #FFFFFF;
+}
+/*HomePage Logo*/
+.header{
+    padding: 10px;
+    text-align: center;
+    background-color: #DC4A1E;
+    color: white;
+    font-family: "Pacifico", cursive;
+}
+.header p{
+    font-family: "Montserrat", sans-serif;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 5px 0px 0px 0px;
+    justify-content: center;
+}
+
+
+/*HomePage NavBar*/
+.navbar{
+    overflow: hidden;
+    background-color: #FFE5DB;
+}
+.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.navbar a{
+    background-color: #FFF2ED;
+    padding: 20px;
+    margin: 0px 5px;
+    text-align: center;
+    align-items: stretch;
+    color: #A93915;
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+.navbar a.logo{
+    background-color: #DC4A1E;
+    margin: 0px;
+    padding: 20px;
+    color: #FFFFFF;
+}
+.navbar a.right{
+    float: right;
+    background-color: #DC4A1E;
+    margin: 0px;
+    color: #FFFFFF;
+}
+.navbar a.focus{
+    color:#5D3322;
+    font-weight: bolder;
+}
+.navbar a:hover{
+    background-color: #A93915;
+    color: #FFFFFF;
+}
+.navbar a.focus:hover{
+    background-color:#5D3322;
+    color: #FFFFFF;
+}
+.navbar a.logo:hover{
+    color: #DC4A1E;
+    background-color: #FFFFFF;
+}
+
+/*HomeContent Layout 1*/
+.title h2 {
+    color: #5D3322;
+    font-weight: 900;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 5px 0px;
+    text-align: center;
+}
+.main{
+    display: flex;
+    flex: 70%;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #FFF2ED;
+    align-items: center;
+    justify-content: center;
+}
+.carousel{
+    background-color: #8f8f8f;
+    height: 300px;
+    width: 700px;
+    border-radius: 10px;
+}
+.arrow{
+    background-color: #5B1D02;
+    padding: 20px;
+}
+.twitter{
+    display: flex;
+    flex: 30%;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #e9d1c8;
+    justify-content: center;
+}
+.feed{
+    background-color: #8f8f8f;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fakeimg{
+    background-color: #8f8f8f;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*Browsing - Menu Items*/
+.browse{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 5px 0px 0px 0px;
+    justify-content: center;
+}
+.card{
+    background-color: #E17A53;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.caption{
+    height: 15%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;   
+}
+.pricing{
+    height: 15%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;   
+}
+.productimage{
+    height: 70%;
+    background-color: #969696;
+    margin: 5px;
+}
+.special{
+    background-color: #A93915;
+}
+.limited{
+    background-color: #7EC056;
+}
+.new{
+    background-color: #FF9066;
+}
+.soldout{
+    background-color: #6D6D6D;
+}
+.soldout .caption{
+    font-weight: bold;
+}
+
+a .card:hover{
+    background-color: #FFFFFF;
+}
+
+/*I really don't know a better way to implement hover states*/
+a .card:hover .caption, a .card:hover .pricing{
+    color: #E17A53;
+}
+a .card.special:hover .caption, a .card.special:hover .pricing{
+    color: #A93915;
+}
+a .card.limited:hover .caption, a .card.limited:hover .pricing{
+    color: #7EC056;
+}
+a .card.new:hover .caption, a .card.new:hover .pricing{
+    color: #FF9066;
+}
+a .card.soldout:hover{
+    background-color: #797979;
+}
+a .card.soldout:hover .caption, a .card.soldout:hover .pricing{
+    color: #000000;
+}
+
+/*browsing - Buttons*/
+.buttoncolumn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 0px 0px 5px 0px;
+    justify-content: center;
+    padding: 20px 0px;
+}
+button{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Montserrat",sans-serif;
+    display: inline-block;
+    align-self: center;
+    border-radius: 10px;
+    border:none;
+    margin: 5px;
+}
+
+.buttoncolumn .checkout{
+    background-color: #C23D04;
+    padding: 20px;
+    width: 400px;
+}
+.buttoncolumn .examineCart{
+    background-color: #5B1D02;
+    padding: 5px 20px;
+    display:inline-block;
+    width: 300px;
+}
+
+
+    /*Adding this because w3schools said so*/
+@media screen and (max-width: 400px) {
+    .navbar a{
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .row1{
+      flex-direction: column;
+    }
+}
