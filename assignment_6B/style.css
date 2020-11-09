@@ -1,0 +1,399 @@
+/*My Figma Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #080503;
+    font-family: "Montserrat", sans-serif;
+}
+body a{
+    text-decoration: none;
+}
+p{
+    color: #FFFFFF;
+}
+/*HomePage Logo*/
+.header{
+    padding: 10px;
+    text-align: center;
+    background-color: #DC4A1E;
+    color: white;
+    font-family: "Pacifico", cursive;
+}
+.header p{
+    font-family: "Montserrat", sans-serif;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 5px 0px 0px 0px;
+    justify-content: center;
+}
+
+
+/*HomePage NavBar*/
+.navbar{
+    overflow: hidden;
+    background-color: #FFE5DB;
+    align-content: center;
+}
+.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.navbar a{
+    background-color: #FFF2ED;
+    padding: 20px;
+    margin: 0px 5px;
+    text-align: center;
+    align-items: stretch;
+    color: #A93915;
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+.carticon{
+    object-fit: scale-down;
+    width: 15px;
+}
+.navbar a.logo{
+    box-sizing: border-box;
+    background-color: #DC4A1E;
+    margin: 0px;
+    
+    color: #FFFFFF;
+}
+.navbar a.right{
+    float: right;
+    background-color: #DC4A1E;
+    margin: 0px;
+    color: #FFFFFF;
+}
+.navbar a.focus{
+    color:#5D3322;
+    font-weight: bolder;
+}
+.navbar a:hover{
+    background-color: #A93915;
+    color: #FFFFFF;
+}
+.navbar a.focus:hover{
+    background-color:#5D3322;
+    color: #FFFFFF;
+}
+.navbar a.logo:hover{
+    color: #DC4A1E;
+    background-color: #FFFFFF;
+}
+
+/*HomeContent Layout 1*/
+.title h2 {
+    color: #5D3322;
+    font-weight: 900;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 0px 0px;
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.fakeimg{
+    background-color: #8f8f8f;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*Browsing - Menu Items*/
+.browse{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 5px 0px 0px 0px;
+    justify-content: center;
+}
+.card{
+    background-color: #E17A53;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.caption{
+    height: 15%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;   
+}
+.pricing{
+    height: 15%;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;   
+}
+.productimage{
+    height: 70%;
+    background-color: #969696;
+    margin: 5px;
+}
+.special{
+    background-color: #A93915;
+}
+.limited{
+    background-color: #7EC056;
+}
+.new{
+    background-color: #FF9066;
+}
+.soldout{
+    background-color: #6D6D6D;
+}
+.soldout .caption{
+    font-weight: bold;
+}
+
+.card:hover{
+    background-color: #FFFFFF;
+}
+
+/*I really don't know a better way to implement hover states*/
+.card:hover .caption, .card:hover .pricing{
+    color: #E17A53;
+}
+.card.special:hover .caption, .card.special:hover .pricing{
+    color: #A93915;
+}
+.card.limited:hover .caption, .card.limited:hover .pricing{
+    color: #7EC056;
+}
+.card.new:hover .caption, .card.new:hover .pricing{
+    color: #FF9066;
+}
+.card.soldout:hover{
+    background-color: #797979;
+    cursor: not-allowed;
+}
+.card.soldout:hover .caption, .card.soldout:hover .pricing{
+    color: #000000;
+}
+
+/*browsing - Buttons*/
+.buttoncolumn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FFF2ED;
+    margin: 0px 0px 5px 0px;
+    justify-content: center;
+    padding: 20px 0px;
+    align-content: center;
+}
+button{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Montserrat",sans-serif;
+    display: inline-block;
+    align-self: center;
+    border-radius: 10px;
+    border:none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button.checkout{
+    background-color: #C23D04;
+    padding: 20px;
+    width: 400px;
+}
+button#trash{
+    background-color: #a5a5a5;
+    color: #1f1612;
+    padding: 20px;
+    width: 400px;
+}
+
+/*product info page*/
+.main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #FFF2ED;
+    margin: 5px 0px 0px 0px;
+    justify-content: center;
+}
+    /*left half*/
+.description{
+    align-content: center;
+
+    padding: 10px;
+    display: grid;
+    overflow: auto;
+    grid-template-rows: 350px auto;
+}
+img.promo{
+    object-fit: cover;
+    height: 350px;
+    position: top;
+    border-radius: 10px;
+}
+.infobox{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #FFE5DB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+h3#name, span#disclaimer{
+    font-weight: 700;
+    color: #411c0f;
+    font-size: 28px;
+}
+h3.what{
+    font-weight: 600;
+    color: #E17A53;
+}
+h3.allergy{
+    font-weight: 400;
+    color: #D91313;
+}
+h3.doyoumean{
+    font-weight: 400;
+    color: #5D3322;
+}
+.infoinfo{
+    display: grid;
+    grid-template-columns: auto 150px;
+}
+img.nutritional{
+    width: 150px;
+    object-fit: scale-down;
+    padding-left: 20px;
+}
+    /*right half*/
+.options{
+    align-content: center;
+    padding: 10px;
+}
+.opt{
+    font-size: 24px;
+    font-weight: 600;
+    color: #5D3322;
+}
+h3.note{
+    color: #717171;
+    font-weight: 400;
+    font-style: italic;
+}
+h3.message{
+    color: #E17A53;
+    font-weight: 600;
+    font-size: 18px;
+}
+input[type=number], select{
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    padding: 5px;
+    margin: 5px;
+}
+input[type=radio]{
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+.cart{
+    width: 90%;
+    padding: 20px;
+    font-size: 24pt;
+    background-color: #5B1D02;
+}
+
+/*checkout page styling*/
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #FFF2ED;
+    margin: 0px 0px;
+    padding: 20px;
+    text-align: center;
+}
+#parentbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #dfaa96;
+    margin: 0px 0px;
+    padding: 20px;
+    text-align: center;
+}
+    /*stylings for generated order boxes*/
+.order{
+    background-color: #FFF2ED;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.order h2{
+    font-style: italic;
+    font-weight: 400;
+    font-size: medium;
+}
+.order h3{
+    font-weight: 500;
+    font-size: medium;
+}
+.order h4{
+    font-style: italic;
+    font-size: large;
+}
+.order h5{
+    font-size: small;
+    font-weight: 800;
+    background-color: #64270e;
+    color: #FFF2ED;
+    cursor: pointer;
+}
+    /*Adding this because w3schools said so*/
+@media screen and (max-width: 400px) {
+    .navbar a{
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .row1{
+      flex-direction: column;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Original: Gluten-Free</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="main.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="home.html" class="logo">Bun Bun Bake Shop</a>
+      <a href="browsing.html" class="focus">Buy Our Buns!</a>
+      <a href="#" class="disabled">Locations</a>
+      <a href="#" class="disabled">Our Creed</a>
+      <a href="#" class="disabled">News</a>
+      <a href="#" class="focus disabled">Membership/Sign-In</a>
+      <a href="checkout.html" class="right">
+          <img src="assets/cart.png" alt="Cart" class="carticon"> 
+          <span id="carticon">0</span>
+      </a>
+    </div>
+    <div class="main">
+        <div class="description">
+            <img src="assets/glutenfree.png" alt="Delectable and classic original buns" class="promo">
+            <div class="info">
+                <div class="infobox">
+                    <h3 class="what">Allergen Info</h3>
+                    <h3 class="allergy">&#42;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac nulla massa nunc justo, sapien viverra et facilisis purus.</h3>
+                </div>
+                <div class="infobox">
+                    <h3 class="what">Ingredients</h3>
+                    <h3 class="doyoumean">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin quis ut malesuada ultrices lorem. Quisque convallis ut integer blandit tellus. Tellus lectus sit natoque leo eu, eu ut elementum. Id quis id in ac accumsan. Auctor tortor, eu vestibulum platea nunc, lobortis ornare. Cursus justo et risus euismod vitae duis enim non lacus. Ultricies malesuada aliquet vitae euismod tincidunt hendrerit. Non leo purus consectetur tincidunt. Dignissim etiam mattis et laoreet commodo ultrices adipiscing sit elementum. Id est et sit nisl est pulvinar aliquam.</h3>
+                </div>
+                <div class="infobox">
+                    <h3 class="what">Nutritional Facts</h3>
+                    <div class="infoinfo">
+                        <h3 class="doyoumean">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et lorem ac morbi mollis faucibus dui. Natoque et leo dignissim nec libero. Amet a amet eget nibh sit ornare consectetur. 
+                            Mattis gravida et pharetra tempor amet. Vestibulum ac pellentesque turpis egestas.
+                            Tellus lectus sit natoque leo eu, eu ut elementum. Id quis id in ac accumsan.</h3>
+                        <img src="assets/nutr.png" alt="nutritional information" class="nutritional">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="options">
+            <h3 id="name">Original: Gluten-Free</h3>
+            <form>
+                <label class="opt" for="quantity">Quantity</label><br>
+                <input type="number" id="quantity" name="quantity" min="1" max="36" step="1" value="1"><br>
+                <h3 class="note">To be implemented: Some kind of recommendation system if possible.</h3>
+                <label class="opt" for="glazing">Glazing</label><br>
+                <select name="glazing" id="glazing">
+                    <option value="No">None</option>
+                    <option value= "Sugar-Milk">Sugar Milk</option>
+                    <option value= "Vanilla-Milk">Vanilla Milk</option>
+                    <option value= "Double-Chocolate">Double Chocolate</option>
+                </select>
+                <h3 class="opt">Glazing Customization</h3>
+                <input type="radio" id="same" name="customization" value="same">
+                <label for="same">Same Glazing for all of them!</label>
+                <input type="radio" id="different" name="customization" value="different">
+                <label for="different">Let me customize!</label>
+                <h3 class="note">To be implemented: some kind of javascript quantity system thing.</h3>
+                <h3 class="note">To be implemented: some kind of confirmation modal box.</h3>
+                <h3 class="message" id="receipt">Your order: 1 Original: Gluten-Free bun(s) with No glazing.</h3>
+                <h3 class="message" id="price">Price: $3</h3>
+                <button type="button" class="cart" id="cart">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+      <h1>Footer Placeholder</h1>
+    </div>
+  </body>
+</html>
