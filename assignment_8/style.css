@@ -1,0 +1,140 @@
+/*Standard font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/*Handwriting fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=East+Sea+Dokdo&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'East Sea Dokdo', cursive;
+font-family: 'Indie Flower', cursive;
+*/
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  background-color: rgb(32, 21, 0);
+}
+.excuse{
+  background-color: rgb(62, 124, 62);
+  font-family: 'East Sea Dokdo', cursive;
+  font-size: 30px;
+  padding: 5px;
+}
+h1{
+  text-align: center;
+  font-size:100px;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  line-height: 20%;
+}
+h1.caption{
+  font-size: 40px;
+  font-weight: 400;
+}
+p.quote{
+text-align: center;
+}
+h2, h3{
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+}
+h2{
+  font-size: 50px;
+  line-height: 10%;
+}
+h2.caption{
+  font-size: medium;
+  font-weight: 400;
+  font-size: 30px;
+}
+#dicebox{
+  position: relative;
+  background-color: darkgray;
+  display: flex;
+  height: 500px;
+  width: auto;
+  margin: 20px;
+}
+#test{
+  height: 100px;
+}
+.dicebox{
+  position: relative;
+  background-color: gray;
+  display: flex;
+  height: 500px;
+  width: auto;
+  margin: 20px;
+}
+#card{
+  background-color: #ffffff;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  color: black;
+}
+#dice{
+  background-color: rgb(141, 0, 0);
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  color: black;
+}
+.face{
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  display: none;
+}
+
+#card2{
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  color: black;
+}
+
+#stick {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 150px;
+  width: 10px;
+  height: 150px;
+  border-radius: 5px;
+  transform-origin: 50% 0%;
+  background-color: green;
+  z-index: 2;
+}
+#stick2{
+  position: absolute;
+  margin-top: 100px;
+  left: 0;
+  width: 10px;
+  height: 150px;
+  border-radius: 5px;
+  transform-origin: 50% 100%;
+  background-color: green;
+  z-index: 2;
+}
+#stick3{
+  position: absolute; 
+  margin-top: 200px;
+  right: 0;
+  width: 10px;
+  height: 150px;
+  border-radius: 5px;
+  transform-origin: 50% 0%;
+  background-color: green;
+  z-index: 2;
+}
+.eyes{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
