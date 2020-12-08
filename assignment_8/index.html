@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Player's Guide to 10 Candles</title>
+	<!--My Libraries-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="main.js" type="text/javascript"></script>
+  </head>
+  <body>
+	<h1 class="caption">The Player's Guide to</h1>
+	<h1>Ten Candles</h1>
+	<p class="quote">The world is dark.<br>
+	But we are alive.</p>
+
+	<p>Ten Candles is a simple tabletop role-playing game. 
+		It's a tragic horror cooperative storytelling game about people trying to survive and fight against the evil and darkness that will inevitably and most certainly end their lives. 
+		Though the survivors will most certainly perish, the story told isn't one of death, but one of hope, desperation, and the choices people make in the face of their preordained fate.
+	</p>
+	<p>Many may question the value of a nightmarish game where you can't win. However, Ten Candles isn't about winning: It's about telling a story about people and who they really are. 
+		As players play Ten Candles, they'll explore what remains of humanity, overcome challenges, struggle to not succumb to madness, and, maybe, uncover the truth behind their now unwelcoming world.
+	</p>
+	<h2>How the World Will End</h2>
+	<h2 class="caption">The rules are very simple</h2>
+	<div class="excuse">There's a lot of stuff i'm not done yet, so I'll use these commentary boxes to tell you what I plan to have happen</div>
+	<h3>jquery practice</h3>
+	<div class="dicebox" id="test"></div>
+	<div class="excuse">e.g.: This right here is just for me to test out and see how jquery events work.</div>
+	<h3>Conflicts</h3>
+	<div class="excuse">The only mechanic the game really has revolves around dice: If you roll at least one "6", you succeed. If you don't, you fail. I plan on animating a diceroll, a button to call a diceroll, and maybe passing arguments based on what side is "up".</div>
+	<div class="excuse">Also, if you roll a "1", I'll play a special animation and maybe use Jquery's hide() function to show that you lose that dice.</div>
+	<h3>Narrative Control</h3>
+	<div class="excuse">At some point in the game, the players have to roll against the game master. Certain things happen depending on who gets more "6"s.</div>
+	<h2>Your Resources</h2>
+	<p>Your struggle to survive... </p>
+	<div class="excuse">Here are some of the assets I plan to use</div>
+	<h3>Your Traits</h3>
+	<div id="dicebox">
+		<div id="card">click to "burn"</div>
+		<div id="dice">
+			<p id="dicenote">click me to generate an number</p>
+			<img src="assets/1.png" class="face" id="1">
+			<img src="assets/2.png" class="face" id="2">
+			<img src="assets/3.png" class="face" id="3">
+			<img src="assets/4.png" class="face" id="4">
+			<img src="assets/5.png" class="face" id="5">
+			<img src="assets/6.png" class="face" id="6">
+		</div>
+	</div>
+	<div class="excuse">These are supposed to be "paper cards" that burn away to show a message underneath</div>
+	<div class="excuse">Also supposed to be paired with another set of dice to show a "reroll" mechanic</div>
+	<h3>Tentacle z-index test</h3>
+	<div id="stick"></div>
+	<div id="stick2"></div>
+	<div id="stick3"></div>
+	<div class="dicebox">
+		<div id="card2">i am behind the sticks</div>
+	</div>
+	<h3>Wall of eyes test</h3>
+	<div class="dicebox">
+		I might try to implement this and throw it into the background
+		<div class="eyes"></div>
+		<div class="eyes"></div>
+		<div class="eyes"></div>
+		<div class="eyes"></div>
+		<div class="eyes"></div>
+	</div>
+	<div class="excuse">I plan on making some assets in Figma and then throwing them onto this website at z-index=-1. The idea is that I add more of these weird tentacles and eyes as you scroll lower down the page.</div>
+
+	<h3>Your Moment</h3>
+	<h3>Your Brink</h3>
+
+
+	<!--Code here because I don't know how to get it functional on a separate JS file-->
+	<script>
+		$("#dice").click(
+			function(){
+				let roll=Math.floor((Math.random() * 6) + 1);
+				tag = "#"+roll;
+				$("#dicenote").hide();
+				$(".face").hide();
+				$(tag).show();
+				if(roll===6){
+					console.log("success");
+				}
+				else{
+					console.log("failure");
+				}
+			}
+		)
+		let burn=anime.timeline({
+			easing: 'easeOutExpo',
+			duration: 750,
+			autoplay:false
+		});
+		burn.add({
+			targets: "div#card",
+			backgroundColor: "#ff6600",
+		})
+		.add({
+			targets: "div#card",
+			backgroundColor: "#000000"
+		});
+
+		$("#test").hover(
+			function(){
+				$(this).css("background-color", "pink");
+			},
+			function(){
+				$(this).css("background-color", "gray");
+		});
+		
+		document.querySelector("#card").onclick=function(){
+			console.log("click");
+			burn.play();
+		}
+
+		let animation = anime({
+			targets: '#stick',
+			rotate: [-90, 90], // from 60 to -60 degrees
+			duration: 3000,
+			easing: 'easeInOutSine',
+			direction: 'alternate',
+			loop: true
+		});  
+		let animation2 = anime({
+			targets: '#stick2',
+			rotate: [0, 180], // from 60 to -60 degrees
+			duration: 2500,
+			easing: 'easeInOutSine',
+			direction: 'alternate',
+			loop: true
+		});
+		let animation3 = anime({
+			targets: '#stick3',
+			rotate: [0, 180], // from 60 to -60 degrees
+			duration: 2000,
+			easing: 'easeInOutSine',
+			direction: 'alternate',
+			loop: true
+		});  
+
+		let eyes=document.querySelectorAll('.eyes');
+		anime({
+			targets: eyes,
+			scaleY: 0,
+			direction: 'alternate',
+			duration: 500,
+			loop: true
+		});
+
+		
+	</script>
+  </body>
+</html>
