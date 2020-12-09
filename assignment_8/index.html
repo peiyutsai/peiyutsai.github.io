@@ -41,18 +41,27 @@
 	<h3>Your Traits</h3>
 	<div id="dicebox">
 		<div id="card">click to "burn"</div>
-		<div id="dice">
-			<p id="dicenote">click me to generate an number</p>
-			<img src="assets/1.png" class="face" id="1">
-			<img src="assets/2.png" class="face" id="2">
-			<img src="assets/3.png" class="face" id="3">
-			<img src="assets/4.png" class="face" id="4">
-			<img src="assets/5.png" class="face" id="5">
-			<img src="assets/6.png" class="face" id="6">
-		</div>
 	</div>
 	<div class="excuse">These are supposed to be "paper cards" that burn away to show a message underneath</div>
 	<div class="excuse">Also supposed to be paired with another set of dice to show a "reroll" mechanic</div>
+	<h3>1 dice demo</h3>
+	<div class="dicebox" id="dicebox1">
+		<!--template-based approach-->
+	</div>
+	<h3>10 dice and a button demo</h3>
+	<div class="dicebox" id="dicebox2">
+		<!--10 dice here-->
+		<button id="button">roll all</button>
+	</div>
+	<h3>"If roll=x, destroy dice" and "Give my dice back" demo</h3>
+	<div class="dicebox" id="dicebox3">
+		<!--10 dice here-->
+	</div>
+		<button id="button2">roll all</button>
+		<button id="button3">gimme back</button>
+		<p id="math">Chances of getting at least one "6":</p>
+	<div class="excuse">A bunch of primitive dice tests. Still need to figure out how callbacks work.</div>
+
 	<h3>Tentacle z-index test</h3>
 	<div id="stick"></div>
 	<div id="stick2"></div>
@@ -76,84 +85,5 @@
 
 
 	<!--Code here because I don't know how to get it functional on a separate JS file-->
-	<script>
-		$("#dice").click(
-			function(){
-				let roll=Math.floor((Math.random() * 6) + 1);
-				tag = "#"+roll;
-				$("#dicenote").hide();
-				$(".face").hide();
-				$(tag).show();
-				if(roll===6){
-					console.log("success");
-				}
-				else{
-					console.log("failure");
-				}
-			}
-		)
-		let burn=anime.timeline({
-			easing: 'easeOutExpo',
-			duration: 750,
-			autoplay:false
-		});
-		burn.add({
-			targets: "div#card",
-			backgroundColor: "#ff6600",
-		})
-		.add({
-			targets: "div#card",
-			backgroundColor: "#000000"
-		});
-
-		$("#test").hover(
-			function(){
-				$(this).css("background-color", "pink");
-			},
-			function(){
-				$(this).css("background-color", "gray");
-		});
-		
-		document.querySelector("#card").onclick=function(){
-			console.log("click");
-			burn.play();
-		}
-
-		let animation = anime({
-			targets: '#stick',
-			rotate: [-90, 90], // from 60 to -60 degrees
-			duration: 3000,
-			easing: 'easeInOutSine',
-			direction: 'alternate',
-			loop: true
-		});  
-		let animation2 = anime({
-			targets: '#stick2',
-			rotate: [0, 180], // from 60 to -60 degrees
-			duration: 2500,
-			easing: 'easeInOutSine',
-			direction: 'alternate',
-			loop: true
-		});
-		let animation3 = anime({
-			targets: '#stick3',
-			rotate: [0, 180], // from 60 to -60 degrees
-			duration: 2000,
-			easing: 'easeInOutSine',
-			direction: 'alternate',
-			loop: true
-		});  
-
-		let eyes=document.querySelectorAll('.eyes');
-		anime({
-			targets: eyes,
-			scaleY: 0,
-			direction: 'alternate',
-			duration: 500,
-			loop: true
-		});
-
-		
-	</script>
   </body>
 </html>

@@ -22,6 +22,7 @@ body{
   font-family: 'East Sea Dokdo', cursive;
   font-size: 30px;
   padding: 5px;
+  margin: 5px;
 }
 h1{
   text-align: center;
@@ -55,9 +56,22 @@ h2.caption{
   position: relative;
   background-color: darkgray;
   display: flex;
-  height: 500px;
+  height: 300px;
   width: auto;
   margin: 20px;
+}
+#dicebox1{
+  height: auto;
+}
+#dicebox2{
+  height: auto;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+#dicebox3{
+  height: auto;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 #test{
   height: 100px;
@@ -78,6 +92,13 @@ h2.caption{
   color: black;
 }
 #dice{
+  background-color: rgb(141, 0, 0);
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  color: black;
+}
+.dice{
   background-color: rgb(141, 0, 0);
   height: 100px;
   width: 100px;
