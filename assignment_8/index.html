@@ -12,78 +12,167 @@
 	<script src="main.js" type="text/javascript"></script>
   </head>
   <body>
-	<h1 class="caption">The Player's Guide to</h1>
-	<h1>Ten Candles</h1>
-	<p class="quote">The world is dark.<br>
-	But we are alive.</p>
+	  <div class="gradient">
+		<h1 class="caption">The Player's Guide to</h1>
+		<h1>Ten Candles</h1>
+		<br>
+		<p class="quote">The world is dark.<br>
+		But we are alive.</p>
+		<br>
 
-	<p>Ten Candles is a simple tabletop role-playing game. 
-		It's a tragic horror cooperative storytelling game about people trying to survive and fight against the evil and darkness that will inevitably and most certainly end their lives. 
-		Though the survivors will most certainly perish, the story told isn't one of death, but one of hope, desperation, and the choices people make in the face of their preordained fate.
-	</p>
-	<p>Many may question the value of a nightmarish game where you can't win. However, Ten Candles isn't about winning: It's about telling a story about people and who they really are. 
-		As players play Ten Candles, they'll explore what remains of humanity, overcome challenges, struggle to not succumb to madness, and, maybe, uncover the truth behind their now unwelcoming world.
-	</p>
-	<h2>How the World Will End</h2>
-	<h2 class="caption">The rules are very simple</h2>
-	<div class="excuse">There's a lot of stuff i'm not done yet, so I'll use these commentary boxes to tell you what I plan to have happen</div>
-	<h3>jquery practice</h3>
-	<div class="dicebox" id="test"></div>
-	<div class="excuse">e.g.: This right here is just for me to test out and see how jquery events work.</div>
-	<h3>Conflicts</h3>
-	<div class="excuse">The only mechanic the game really has revolves around dice: If you roll at least one "6", you succeed. If you don't, you fail. I plan on animating a diceroll, a button to call a diceroll, and maybe passing arguments based on what side is "up".</div>
-	<div class="excuse">Also, if you roll a "1", I'll play a special animation and maybe use Jquery's hide() function to show that you lose that dice.</div>
-	<h3>Narrative Control</h3>
-	<div class="excuse">At some point in the game, the players have to roll against the game master. Certain things happen depending on who gets more "6"s.</div>
-	<h2>Your Resources</h2>
-	<p>Your struggle to survive... </p>
-	<div class="excuse">Here are some of the assets I plan to use</div>
-	<h3>Your Traits</h3>
-	<div id="dicebox">
-		<div id="card">click to "burn"</div>
-	</div>
-	<div class="excuse">These are supposed to be "paper cards" that burn away to show a message underneath</div>
-	<div class="excuse">Also supposed to be paired with another set of dice to show a "reroll" mechanic</div>
-	<h3>1 dice demo</h3>
-	<div class="dicebox" id="dicebox1">
-		<!--template-based approach-->
-	</div>
-	<h3>10 dice and a button demo</h3>
-	<div class="dicebox" id="dicebox2">
-		<!--10 dice here-->
-		<button id="button">roll all</button>
-	</div>
-	<h3>"If roll=x, destroy dice" and "Give my dice back" demo</h3>
-	<div class="dicebox" id="dicebox3">
-		<!--10 dice here-->
-	</div>
-		<button id="button2">roll all</button>
-		<button id="button3">gimme back</button>
-		<p id="math">Chances of getting at least one "6":</p>
-	<div class="excuse">A bunch of primitive dice tests. Still need to figure out how callbacks work.</div>
+		<p>Ten Candles is a simple tabletop role-playing game. 
+			It's a tragic horror cooperative storytelling game about people trying to survive and fight against the evil and insidious THEM that will inevitably and most certainly end their lives. 
+			Though the survivors will most certainly perish, the story told isn't one of death, but one of hope, desperation, and the choices people make in the face of their preordained fate.
+		</p>
+		<p>Many may question the value of a nightmarish game where you can't win. However, Ten Candles isn't about winning: It's about telling a story about people and who they really are. 
+			As players play Ten Candles, they'll explore what remains of humanity, overcome challenges, struggle to not succumb to madness, and, maybe, uncover the truth behind who or what THEY are and what happened to their now unwelcoming world.
+		</p>
+		<p>This website will teach you the bare minimum rules and guidelines that you need to be able to participate and enjoy a game of Ten Candles.</p>
+		<br>
+		<p class="excuse">To avoid bugs, please wait for the animations to complete before clicking other buttons. Thank you for checking out my website.</p>
+		<br>
+		<h2>How the World Will End</h2>
+		<h2 class="caption">Conflicts</h2>
+		<p>Conflicts are what move this game forward and shape the story that the players tell. Whenever a character faces a challenge that requires skill, strength, or wit to overcome, tries to do something with an unknown outcome, makes a risky decision, or is simply prompted by the Gamemaster running the story, the player will need to roll dice and resolve a conflict.</p>
+		<p>The rules are very simple: If you rolled even a single "6", you succeed the conflict.</p>
+		<div class="dicebox">
+			<div class="alt dicebox" id="conflictResult">
+				<h2 class="boxtext">Conflict Result</h2>
+			</div>
+			<div class="sub dicebox" id="conflicts">
+				<!--template-based approach: A function in the JS file builds the elements for me-->
+			</div>
+		</div>
+		<div class="buttonbox">
+			<button id="conflictButton">Roll Dice</button>
+			<button id="conflictRefresh">Refresh Dice</button>
+		</div>
+		<br><br>
+		<h2 class="caption">Gameflow</h2>
+		<p>Though you only need one "6" to succeed, the story is built in such a way that the odds of success grow lower and lower.</p>
+		<p>Initially, the GROUP shares a communal pool of 10 dice and has 10 lit candles. The story continues to progress if there's a "6", but every "1" rolled is removed from the pool.</p>
+		<p>If no "6"s are rolled, the conflict fails and the current chapter of the story ends. Every time a chapter ends, a candle is darkened, bad stuff usually happen to escalate the plot, and the communal pool of dice is refilled to the amount of candles still lit. These permanently removed dice goes to the Gamemaster.</p>
+		<br>
+		<p>During conflicts, you are also fighting for control over how the story progresses. If you roll more "6"s than the Gamemaster, you get to dictate (within reason), how the conflict is resolved. Conversely, if you rolled "6"s but you have lesser or equal to that of the Gamemaster's "6"s, though you still succeed the conflict, the Gamemaster gets to dictate what happens to you.</p>
+		<p>Below are some dice and a slider you can use to help visualize what some potential conflicts and consequences are like.</p>
+		<div class="dicebox" id="flow">
+			<div id="flowdice">
+				<h3>Your Dice</h3>
+				<div class="sub dicebox" id="flow1">
+				</div>
+				<h3>The Gamemaster's Dice</h3>
+				<div class="sub dicebox" id="flow2">
+					<!--template-based approach: A function in the JS file builds the elements for me-->
+				</div>
+				<h3>I'm on Chapter: <span id="chaptercount">1</span> - <span id="candlecount">10</span> Candle(s) Remaining</h3>
+				<div class="chapter">
+					<input type="range" min="1" max="10" value="1" class="slider" id="myRange">
+				</div>
+			</div>
+			<div id="consequences">
+				<div class="info">
+					<h3>Scenario:</h3>
+					<p id="flowConsequence0">
+						3 people are scavenging for food and supplies in the rubbled remains of a sunless Detroit. They've been starving for a while and the chilling air alongside their hunger has started to gnaw at them. Ideally, they'd find some non-perishable foods and clothing to deal with the growing cold in this abandoned department store that they're about to enter.
+					</p>
+					<br>
+				</div>
+				<div class="alt dicebox" id="flowConsequence1">
+					<h3>Conflict Result</h3>
+				</div>
+				<div class="info2">
+					<h3>Player:</h3>
+					<p id="flowConsequence2">
 
-	<h3>Tentacle z-index test</h3>
-	<div id="stick"></div>
-	<div id="stick2"></div>
-	<div id="stick3"></div>
-	<div class="dicebox">
-		<div id="card2">i am behind the sticks</div>
+					</p>
+					<br>
+				</div>
+				<div class="info2">
+					<h3>Gamemaster:</h3>
+					<p id="flowConsequence3">
+
+					</p>
+					<br>
+				</div>
+			</div>
+		</div>
+		<div class="buttonbox">
+			<button id="flowButton">Roll Dice</button>
+			<button id="flowRefresh">Refresh Chapter</button>
+		</div>
+		<p>You may notice that as the story progresses, the odds of succeeding conflicts decrease and your chances of retaining control over the story become slimmer and slimmer as you lose your dice, your light, and your hope to the Gamemaster and THEM.</p>
+		<p>Though the initial half of the game may feel like a dreadful slow burn, the pace will pick up and situations will escalate.</p>
+		<br>
+		<div class="resources">
+			<h2>What You Will Rely On</h2>
+			<p>The struggle for survival is hard, but not impossible. Sometimes, you just have to be willing to try, even if you will fail. </p>
+			<p>Typically, prior to the actual game, the Gamemaster will prompt you to write certain things for the purposes of creating your own character.</p>
+			<p>The Gamemaster will ask you to stack these four cards in some specific order. You may only use the topmost card of your stack at any given time and you may only use one card at a time.</p> 
+			<p>This is what they do.</p>
+			<br>
+			<h2 class="caption">Your Traits</h2>
+			<p>This is what you're made of. What defines you.</p>
+			<p>During conflicts, there may be opportunities for you to fight for a Success. Depending on the situation, you can burn away a core part of your character to raise the chances of survival.</p>
+			<br>
+			<p>A Virtue is a trait or characteristic that your character is proud of. Typically this trait is helpful, positive, and well-valued in society.</p>
+			<p>After a conflict roll, if this card is the topmost card of your deck, you may burn it to reroll any "1"s you've rolled.</p>
+			<p>After consuming the card, this effectively means that this particular facet of your personality and core being is burnt away and no more. Though you don't always have to do this, it's recommended that you work your trait into the story.</p>
+			<p>Below are just a few examples of Virtues and their narrative usage.</p>
+			<div class="dicebox" id="virtues">
+				<div class="alt dicebox">
+					Virtues
+				</div>
+			</div>
+			<br>
+			<p>A Vice is a negative trait or characteristic that your character is ashamed of. Perhaps it's an addiction, a major impairment, something that they have to deal with, or something that they would like to overcome.</p>
+			<p>Similar to Virtues, Vices are functionally the same in the fact that, if this is the topmost card of your deck, you can burn it after a roll to reroll any "1"s that you've rolled.</p>
+			<div class="dicebox" id="vices">
+				<div class="alt dicebox">
+					Vices
+				</div>
+			</div>
+			<p>All in all, the traits are a rare second chance for someone to reattempt to succeed a conflict roll or to salvage "1"s that are about to be lost.</p>
+			<br>
+			<h2 class="caption">Your Hope</h2>
+			<p>The Moment is usually defined after the Gamemaster gives you a brief idea of what the setting or premise of the night's game is.</p>
+			<p>The Moment is a personal scene or event that the character looks forward to living and serves as an opportunity to find Hope. It is a reasonably achievable event in the context of the game's story and serves as a guiding beacon for the player's narrative direction. Of course, much like real life, not everyone finds hope or gets the chance to find hope.</p>
+			<p>Unlike the Traits, you cannot use it to reroll "1"s. If the Moment is the topmost card of your deck and you've found a way to work it into the story, you can declare your intention to live your Moment and call for a conflict roll. This works much like any other conflict roll and succeeds with a single "6".</p>
+			<p>No rerolls are possible. This is a wager that your character deserves hope.</p>
+			<div class="dicebox" id="moment">
+				<div class="alt dicebox">
+					Moment
+				</div>
+			</div>
+			<p>Maybe John gets to find a quiet place to read in the apocalpyse. Upon a successful roll, not only is your Moment achieved, you also gain a personal (not communal) Hope Die that succeeds on both a "5" and "6" and is NOT lost on a "1".</p>
+			<p>Alternatively, John's personal haven might've been infested with Them. Upon a failed roll, however, your hope is lost, a candle is darkened, as if a conflict just failed, and the story progresses to its next chapter with its own consequences.</p>
+			<br>
+			<h2 class="caption">After Everything Is Burnt</h2>
+			<p>This will be the last card of your stack. After everything is consumed by the fire for that ephemeral amount of heat, light, and hope, only then can you explore what your character is truly capable of. What will you do on the brink of hopelessness, desperation, and fear? That's what the Brink seeks to answer.</p>
+			<p>Whether or not you choose to succumb to your Brink is your choice, but, for those who do choose to embrace the darkest corners of their being, this is what it does:</p>
+			<p>After a conflict roll, if the Brink is the only card left in your deck, you can choose to use (not Burn!) the card in order to reroll every single dice in your communal dice pool, including any and all "6"s.</p>
+			<div class="dicebox" id="brink">
+				<div class="alt dicebox">
+					Brink
+				</div>
+			</div>
+			<p>In order to use your Brink, everything above it must be burned. Only when you've tried everything and are at your wit's end can you do your desperate dance on the brink of destruction.</p>
+			<p>Upon a successful roll, you get to keep your Brink to be used for another time.</p>
+			<p>However, upon an unsuccessful roll, your Brink is burned, any Hope die you earned is lost for good, a candle is snuffed out, and the current chapter ends. You have lost all hope and have been consumed by your Brink. How you choose to interpret this narratively is completely up to you.</p>
+			<br>
+		</div>
 	</div>
-	<h3>Wall of eyes test</h3>
-	<div class="dicebox">
-		I might try to implement this and throw it into the background
-		<div class="eyes"></div>
-		<div class="eyes"></div>
-		<div class="eyes"></div>
-		<div class="eyes"></div>
-		<div class="eyes"></div>
+	<p>After the last candle fades, the story ends and all that's left to do is to reflect.</p>
+	<p>Thank you for taking the time to read through the website. I hope you find this game interesting enough to try it out with a group of friends.</p>
+	<br>
+	<div>
+		<h2>Recommended Tales</h2>
+		<p>If you're interested, here are some of the stories that either use the Ten Candles system of storytelling or tells a similar story in a different medium. Alternatively, you can also Google "Movies where literally everyone dies" and find a couple of good films yourself.</p>
+		<div class="vidyas">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ebGiJZG56eA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/zAQTRqiV3g8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/_fYsz_YSwiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/91bY9h35qTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
 	</div>
-	<div class="excuse">I plan on making some assets in Figma and then throwing them onto this website at z-index=-1. The idea is that I add more of these weird tentacles and eyes as you scroll lower down the page.</div>
-
-	<h3>Your Moment</h3>
-	<h3>Your Brink</h3>
-
-
-	<!--Code here because I don't know how to get it functional on a separate JS file-->
   </body>
 </html>

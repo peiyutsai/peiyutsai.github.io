@@ -5,24 +5,42 @@
 /*Handwriting fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=East+Sea+Dokdo&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Permanent+Marker&family=Rock+Salt&family=Shadows+Into+Light&display=swap');
 /*
 font-family: 'Amatic SC', cursive;
 font-family: 'Dancing Script', cursive;
 font-family: 'East Sea Dokdo', cursive;
 font-family: 'Indie Flower', cursive;
+font-family: 'Covered By Your Grace', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Shadows Into Light', cursive;
 */
 
+/*Basic text formatting*/
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Amatic SC', cursive;
   color: #ffffff;
-  background-color: rgb(32, 21, 0);
+  background-color: rgb(10, 7, 1);
+}
+.gradient{
+  background: linear-gradient(180deg, rgba(32, 21, 0, 0) 0%, #FF0000 100%);
+  z-index:-1;
+}
+.vidyas{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .excuse{
-  background-color: rgb(62, 124, 62);
+  background-color: rgb(114, 15, 15);
   font-family: 'East Sea Dokdo', cursive;
   font-size: 30px;
   padding: 5px;
   margin: 5px;
+}
+p{
+  margin: 10px;
 }
 h1{
   text-align: center;
@@ -32,11 +50,19 @@ h1{
   line-height: 20%;
 }
 h1.caption{
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 400;
+}
+p{
+  font-size: 24px;
+}
+.dicebox p{
+  font-size: 12px;
 }
 p.quote{
 text-align: center;
+font-family: 'Shadows Into Light', cursive;
+
 }
 h2, h3{
   text-align: center;
@@ -52,58 +78,163 @@ h2.caption{
   font-weight: 400;
   font-size: 30px;
 }
-#dicebox{
-  position: relative;
-  background-color: darkgray;
-  display: flex;
-  height: 300px;
-  width: auto;
-  margin: 20px;
+#chaptercount{
+  font-weight: 700;
 }
-#dicebox1{
-  height: auto;
+.boxtext{
+  padding: 20px;
 }
-#dicebox2{
-  height: auto;
-  flex-wrap:wrap;
-  justify-content: center;
-}
-#dicebox3{
-  height: auto;
-  flex-wrap:wrap;
-  justify-content: center;
-}
-#test{
-  height: 100px;
-}
+
+/*content*/
 .dicebox{
   position: relative;
-  background-color: gray;
+  background-color:rgb(65, 0, 0);
+  border: rgb(255, 247, 247);
+  border-radius: 5px;
+  border-width: 10px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
   display: flex;
-  height: 500px;
+  height: auto;
   width: auto;
-  margin: 20px;
+  margin: 10px;
+  flex-wrap:wrap;
+  justify-content: center;
 }
-#card{
+  /*Conflicts section*/
+.sub{
+  background-color: rgb(255, 149, 149);
+  max-width: 600px;
+  margin: 10px;
+  min-height: 120px;
+}
+.alt{
+  background-color: rgb(58, 41, 41);
+  padding: 10px;
+  font-size: 50px;
+}
+  /*Gameflow section*/
+.info{
+  background-color: rgb(24, 12, 12);
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+.info2{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px;
+  min-width: 200px;
+  max-width: 500px;
+  margin: 10px;
+}
+.info p, .info2 p{
+  font-size: 18px;
+  padding: 10px;
+}
+#flow{
+  flex-direction: row;
+  min-height: 100px;
+  align-content: center;
+}
+#flowdice{
+  flex-direction: column;
+  align-content: center;
+}
+#consequences{
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  min-height: 120px;
+  margin: 10px;
+}
+#flow1, #flow2{
+  min-height: 240px;
+}
+.buttonbox{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+button{
+  cursor: pointer;
+  min-width: 200px;
+  font-family: 'Shadows Into Light', cursive;
+}
+.chapter{
+  align-content: center;
+  margin: auto;
+}
+.slider{
+  width: 300px;
+  margin: auto;
+  cursor: pointer;
+  height: 20px;
+  outline: rgb(65, 0, 0);
+  opacity: 0.7;
+  display: block;
+}
+.slider:hover{
+  opacity: 1;
+}
+
+/*Cards*/
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 14px;
+}
+.resources .alt.dicebox{
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  min-width: 200px;
+  height: auto;
+}
+.card p{
+  padding: 10px;
+}
+#card-0, #card-3, #card-6, #card-9{
+  font-family: 'Permanent Marker', cursive;
+}
+#card-1, #card-4, #card-7, #card-10{
+  font-family: 'Shadows Into Light', cursive;
+}
+#card-2, #card-5, #card-8, #card-11{
+  font-family: 'Covered By Your Grace', cursive;
+}
+.top{
   background-color: #ffffff;
-  height: 100px;
-  width: 100px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  height: 200px;
+  width: 250px;
   margin: 20px;
   color: black;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
 }
-#dice{
-  background-color: rgb(141, 0, 0);
-  height: 100px;
-  width: 100px;
+.top p{
+  font-size: 30px;
+}
+.bottom{
+  background-color: #920000;
+  box-shadow: inset 0px 5px 4px rgba(0, 0, 0, 0.25);
+  height: 200px;
+  width: 250px;
   margin: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
+
 .dice{
-  background-color: rgb(141, 0, 0);
+  background-color: rgb(65, 0, 0);
   height: 100px;
   width: 100px;
-  margin: 20px;
+  margin: 10px;
   color: black;
+  border-radius: 10%;
 }
 .face{
   height: 100px;
@@ -112,50 +243,12 @@ h2.caption{
   display: none;
 }
 
-#card2{
-  background-color: white;
-  height: 100px;
-  width: 100px;
-  margin: 20px;
-  color: black;
-}
 
-#stick {
-  position: absolute;
-  margin-top: 0px;
-  margin-left: 150px;
-  width: 10px;
-  height: 150px;
-  border-radius: 5px;
-  transform-origin: 50% 0%;
-  background-color: green;
-  z-index: 2;
-}
-#stick2{
-  position: absolute;
-  margin-top: 100px;
-  left: 0;
-  width: 10px;
-  height: 150px;
-  border-radius: 5px;
-  transform-origin: 50% 100%;
-  background-color: green;
-  z-index: 2;
-}
-#stick3{
-  position: absolute; 
-  margin-top: 200px;
-  right: 0;
-  width: 10px;
-  height: 150px;
-  border-radius: 5px;
-  transform-origin: 50% 0%;
-  background-color: green;
-  z-index: 2;
-}
-.eyes{
-  height: 50px;
-  width: 50px;
-  background-color: red;
-  border-radius: 50%;
+
+
+/*Miscellaneous responsive stuff*/
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(10, 7, 1);
+  }
 }
